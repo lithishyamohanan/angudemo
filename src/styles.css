@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+.hello{
+    position: relative;
+    margin-top:30px;
+    margin-left: 27px;
+    border: 20px;
+    background-color:turquoise;
+    width:350px;
+    height:400px;
+}
+body{
+    background-color:brown;
+}
+#head{
+    text-align: center;
+}
+.one{
+    width:400px;
+    height:400px;
+    background-color: turquoise;
+    border-radius: 15px;
+}
+#new{
+    width:350px;
+}
+#ok{
+    text-decoration: none;
+    position:relative;
+    left:100px;
+    top:15px;
+}
+.moon{
+    border-bottom: 1px solid black;
+    display: flex;
+    position: relative;
+    top: 23px;
+    
+}    
+#six{
+    position: relative;
+    margin-top: 38px ;
+     margin-left:0px;
+     width:350px;
+     height:40px;
+     border-radius: 10px;
+     background-color: tomato;
+     color:white
+}
+#two{
+    text-align: center;
+}
