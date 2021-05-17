@@ -9,9 +9,9 @@
             <form>
                 <h4 id="head">WELCOME TO MM BANK<br>
                 <h6>{{aim}}</h6></h4>
-            <input type="text" class="form-control form-control-lg " id="acno" [value]="accno" (change)="accnoChange($event)" placeholder="enter account number"><br>
-            <input type="password" class="form-control form-control-lg" id="pwd" (change)="pswdChange($event)" placeholder="enter password"><br>
-            <button  id="new" class="btn btn-success" (click)="login()">Log In</button><br>
+            <input type="text" class="form-control form-control-lg " id="acno" [value]="acno" #accno placeholder="enter account number"><br>
+            <input type="password" class="form-control form-control-lg" id="pwd" #pswd placeholder="enter password"><br>
+            <button  id="new" class="btn btn-success" (click)="login(accno,pswd)">Log In</button><br>
             <a href="#" id="ok">Forgotten password?
             </a><br>
             <div class="moon"></div>
