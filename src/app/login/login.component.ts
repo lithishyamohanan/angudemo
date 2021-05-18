@@ -36,7 +36,7 @@ login(){
   if (acno in users) {
     if (pswd== users[acno]["password"]) {
        alert("login successful");
-       this.router.navigateByUrl("dashboard")
+       this.router.navigateByUrl("dashboard");
     }
     else {
         alert("password incorrect");
@@ -46,5 +46,8 @@ login(){
 else {
     alert("Invalid account");
 }
+}
+register(){
+  this.router.navigateByUrl("register");
 }
 }
