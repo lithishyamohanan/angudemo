@@ -1,1 +1,41 @@
-<p>dashboard works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-6">
+          <div class="one"> 
+          <div class="hello">
+            <form (ngSubmit)="deposit()">
+                <h4 id="head">WELCOME TO MM BANK<br>
+                <h6><b>DEPOSIT FORM</b></h6></h4>
+            <input type="text" class="form-control form-control-lg " id="acno"  name="accountno" [(ngModel)]="dAccno" placeholder="enter account number"><br>
+            <input type="password" class="form-control form-control-lg" id="pwd" name="password" [(ngModel)]="dPswd" placeholder="enter password"><br>
+            <input type="text" class="form-control form-control-lg " id="amt"  name="amount" [(ngModel)]="dAmount" placeholder="enter amount"><br>
+
+            <div class="moon"></div>
+            <button type="submit" id="six" ><h6><b>Deposit</b></h6></button><br>
+        
+            </form>
+         </div>
+         </div>
+        </div>
+        <div class="col-5">
+            <div class="one"> 
+                <div class="hello">
+                  <form (ngSubmit)="withdraw()">
+                      <h4 id="head">WELCOME TO MM BANK<br>
+                      <h6><b>WITHDRAW FORM</b></h6></h4>
+                
+                  <input type="text" class="form-control form-control-lg " id="acno"  name="accountno" [(ngModel)]="wAccno" placeholder="enter account number"><br>
+                  <input type="password" class="form-control form-control-lg" id="pwd" name="password"[(ngModel)]="wPswd" placeholder="enter password"><br>
+                  <input type="text" class="form-control form-control-lg" id="amt" name="amount"[(ngModel)]="wAmount" placeholder="enter amount"><br>
+                  <div class="moon"></div>
+                  <button type="submit"   id="six" ><h6><b>Withdrawal</b></h6></button><br>
+                  
+                  </form>
+               </div>
+               </div>
+              
+        </div>
+    </div>
+  </div>
+

@@ -6,7 +6,7 @@
         <div class="col-4">
           <div class="one"> 
           <div class="hello">
-            <form>
+            <form (ngSubmit)="register()">
                 <h4 id="head">WELCOME TO MM BANK<br>
                 <h6>register</h6></h4>
                 <input type="text" class="form-control form-control-lg " id="acno" [(ngModel)]="uname" name="username" placeholder="enter user name"><br>
@@ -14,7 +14,8 @@
             <input type="password" class="form-control form-control-lg" id="pwd" [(ngModel)]="pswd" name="password" placeholder="enter password"><br>
            
             <div class="moon"></div>
-            <button id="six" (click)="register()"><h6><b>Create New Account</b></h6></button><br>
+            <button type="submit"   id="six" ><h6><b>Register</b></h6></button><br>
+            <a routerLink="">Login</a>
             </form>
          </div>
          </div>
