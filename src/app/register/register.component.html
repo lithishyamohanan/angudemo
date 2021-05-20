@@ -6,12 +6,14 @@
         <div class="col-4">
           <div class="one"> 
           <div class="hello">
-            <form (ngSubmit)="register()">
+            <form [formGroup]="registerForm" (ngSubmit)="register()">
                 <h4 id="head">WELCOME TO MM BANK<br>
                 <h6>register</h6></h4>
-                <input type="text" class="form-control form-control-lg " id="acno" [(ngModel)]="uname" name="username" placeholder="enter user name"><br>
-            <input type="text" class="form-control form-control-lg " id="acno" [(ngModel)]="acno" name="accountno" placeholder="enter account number"><br>
-            <input type="password" class="form-control form-control-lg" id="pwd" [(ngModel)]="pswd" name="password" placeholder="enter password"><br>
+              
+            <input type="text" class="form-control form-control-lg " id="acno" formControlName="uname" name="username" placeholder="enter user name">
+            <div class="error">invalid username</div>
+            <input type="text" class="form-control form-control-lg " id="acno" formControlName="acno" name="accountno" placeholder="enter account number"><br>
+            <input type="password" class="form-control form-control-lg" id="pwd" formControlName="pswd" name="password" placeholder="enter password"><br>
            
             <div class="moon"></div>
             <button type="submit"   id="six" ><h6><b>Register</b></h6></button><br>
