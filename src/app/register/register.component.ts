@@ -22,12 +22,7 @@ export class RegisterComponent implements OnInit {
   }
  register()
  {
-   console.log(this.registerForm.get('uname')?.errors);
-   if(this.registerForm.get('uname')?.errors){
-      alert("username required");
-   }
-   
-  if(this.registerForm.valid){ 
+   if(this.registerForm.valid){ 
    var uname=this.registerForm.value.uname;
    var acno=this.registerForm.value.acno;
    var pswd=this.registerForm.value.pswd;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -13,30 +14,46 @@ export class DashboardComponent implements OnInit {
   wAccno="";
   wPswd="";
   wAmount="";
-  constructor(private dataService:DataService) { }
+  depositform=this.fb.group({
+    acno:['',[Validators.required,Validators.minLength(4),Validators.pattern('[0-9]*')]],
+    pswd:['',[Validators.required,Validators.pattern('[a-zA-Z0-9]*')]],
+    amount:['',[Validators.required,Validators.pattern('[0-9]*')]]
+  })
+  withdrawform=this.fb.group({
+    acno:['',[Validators.required,Validators.minLength(4),Validators.pattern('[0-9]*')]],
+    pswd:['',[Validators.required,Validators.pattern('[a-zA-Z0-9]*')]],
+    amount:['',[Validators.required,Validators.pattern('[0-9]*')]]
+  })
+  constructor(private dataService:DataService,private fb:FormBuilder) { }
 
   ngOnInit(): void {
   }
  deposit(){
-   
-   var accno=this.dAccno;
-   var pswd=this.dPswd;
-   var amount=this.dAmount;
+   if(this.depositform.valid){
+   var accno=this.depositform.value.acno;
+   var pswd=this.depositform.value.pswd;
+   var amount=this.depositform.value.amount;
    const result = this.dataService.deposit(accno,pswd,amount)
    if(result){
       alert("The given amount"+amount+"  credited... and new balance is:"+result);
    }
-
+  }
+  else{
+    alert("invalid form");
+  }
  }
  withdraw(){
-   
-  var accno=this.wAccno;
-  var pswd=this.wPswd;
-  var amount=this.wAmount;
+  if(this.withdrawform.valid){
+  var accno=this.withdrawform.value.acno;
+  var pswd=this.withdrawform.value.pswd;
+  var amount=this.withdrawform.value.amount;
   const result = this.dataService.withdraw(accno,pswd,amount)
   if(result){
      alert("The given amount"+amount+" debited.... and new balance is:"+result);
   }
-
+  }
+  else{
+    alert("invalid form");
+  }
 }
 }

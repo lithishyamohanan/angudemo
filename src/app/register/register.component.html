@@ -10,11 +10,13 @@
                 <h4 id="head">WELCOME TO MM BANK<br>
                 <h6>register</h6></h4>
               
-            <input type="text" class="form-control form-control-lg " id="acno" formControlName="uname" name="username" placeholder="enter user name">
-            <div class="error">invalid username</div>
+            <input type="text" class="form-control form-control-lg " id="acn" formControlName="uname" name="username" placeholder="enter user name"><br>
+            <div *ngIf="(registerForm.get('uname')?.touched || registerForm.get('uname')?.dirty) && registerForm.get('uname')?.errors" class="error">invalid username</div>
             <input type="text" class="form-control form-control-lg " id="acno" formControlName="acno" name="accountno" placeholder="enter account number"><br>
+            <div *ngIf="(registerForm.get('acno')?.touched || registerForm.get('acno')?.dirty) && registerForm.get('acno')?.errors" class="error">invalid account num</div>
             <input type="password" class="form-control form-control-lg" id="pwd" formControlName="pswd" name="password" placeholder="enter password"><br>
-           
+            <div *ngIf="(registerForm.get('pswd')?.touched || registerForm.get('pswd')?.dirty) && registerForm.get('pswd')?.errors" class="error">invalid password</div>
+
             <div class="moon"></div>
             <button type="submit"   id="six" ><h6><b>Register</b></h6></button><br>
             <a routerLink="">Login</a>
