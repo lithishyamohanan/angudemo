@@ -24,6 +24,7 @@ export class DashboardComponent implements OnInit {
     pswd:['',[Validators.required,Validators.pattern('[a-zA-Z0-9]*')]],
     amount:['',[Validators.required,Validators.pattern('[0-9]*')]]
   })
+  user=this.dataService.currentUser;
   constructor(private dataService:DataService,private fb:FormBuilder) { }
 
   ngOnInit(): void {
