@@ -18,8 +18,9 @@ export class DataService {
    }
     saveDetails(){
       localStorage.setItem("accountDetails",JSON.stringify(this.accountDetails));
+      if(this.currentUser){
       localStorage.setItem("currentUser",JSON.stringify(this.currentUser));
-
+      }
     }
     getDetails(){
       if(localStorage.getItem("accountDetails")){
