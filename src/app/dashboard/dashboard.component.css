@@ -1,3 +1,27 @@
 .error{
     color:red;
 }
+#seven{
+    position: relative;
+    margin-top: 38px ;
+     margin-left:0px;
+     width:350px;
+     height:40px;
+     border-radius: 10px;
+     background-color: tomato;
+     color:white
+}
+#nil{
+    position: relative;
+    margin-top: 38px ;
+     margin-left:0px;
+    width:250px;
+    height:40px;
+    border-radius: 10px;
+     background-color: tomato;
+     color:white;
+}
+.style1{
+    background-color: grey;
+    opacity: .1;
+}

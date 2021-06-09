@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 .hello{
     position: relative;
-    margin-top:30px;
+    margin-top:25px;
     margin-left: 27px;
     border: 20px;
     background-color:turquoise;
@@ -16,7 +16,7 @@ body{
 }
 .one{
     width:400px;
-    height:450px;
+    height:400px;
     background-color: turquoise;
     border-radius: 15px;
 }
